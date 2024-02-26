@@ -3,22 +3,22 @@ use lms;
 -- Insert data into the address table
 INSERT INTO address (address_id, line1, line2, city, state, zip)
 VALUES
-(1, '123 Main St', 'Apt 4', 'Cityville', 'CA', 12345),
-(2, '456 Oak Ave', NULL, 'Townton', 'NY', 56789),
-(3, '789 Pine Rd', 'Suite 12', 'Villageton', 'TX', 98765),
-(4, '101 Elm St', NULL, 'Hamletville', 'FL', 54321),
-(5, '202 Maple Blvd', 'Unit 8', 'Village Center', 'IL', 67890),
-(6, '303 Cedar Lane', NULL, 'Townsville', 'AZ', 13579);
+(1, '630 Park View Dr', 'Apt 209', 'SanJose', 'CA', 95054),
+(2, '7008 Taylor Crossing Dr', 'Apt A' , 'Montgomery', 'AL', 36117),
+(3, '1294 Hidden Rdg', 'Apt 1070', 'Irving', 'TX', 75038),
+(4, '3110 Westview Dr', NULL, 'Mckinney', 'Tx', 75070),
+(5, 'Village Green Blvd', 'Apt 346', 'Ann Arbor', 'MI', 48105),
+(6, '37 St Pauls Ave', NULL, 'Jersey City', 'NJ', 07306);
 
 -- Insert data into the book table
 INSERT INTO book (book_id, title, author_name, year_published, quantity)
 VALUES
-(1, 'The Catcher in the Rye', 'J.D. Salinger', 1951, 3),
-(2, 'To Kill a Mockingbird', 'Harper Lee', 1960, 2),
-(3, '1984', 'George Orwell', 1949, 6),
-(4, 'The Great Gatsby', 'F. Scott Fitzgerald', 1925, 4),
-(5, 'Pride and Prejudice', 'Jane Austen', 1813, 3),
-(6, 'The Hobbit', 'J.R.R. Tolkien', 1937, 2);
+(1, 'Rich Dad Poor Dad', 'Robert Kiyosaki', 1997, 1000),
+(2, 'The Power of Habit', 'Charles Duhigg', 2012, 1000),
+(3, 'How to Win Friends and Influence People', 'Dale Carnegie', 1936, 5000),
+(4, 'The Game of Thrones', 'George R. R. Martin', 1996, 4000),
+(5, 'Pride and Prejudice', 'Jane Austen', 1813, 3000),
+(6, 'The Hobbit', 'J.R.R. Tolkien', 1937, 2000);
 
 -- Insert data into the book_isbn table with unique ISBNs
 INSERT INTO book_isbn (isbn, book_id)
@@ -48,23 +48,23 @@ VALUES
 -- Insert data into the library_member table
 INSERT INTO library_member (member_id, first_name, last_name, email_address, phone_number, membership_level, address_id)
 VALUES
-(1, 'John', 'Doe', 'john.doe@email.com', 1234567890, 'Gold', 1),
-(2, 'Jane', 'Smith', 'jane.smith@email.com', 9876543210, 'Silver', 2),
-(3, 'Bob', 'Johnson', 'bob.johnson@email.com', 5556667777, 'Bronze', 3),
-(4, 'Alice', 'Williams', 'alice.williams@email.com', 1112223333, 'Gold', 4),
-(5, 'Charlie', 'Brown', 'charlie.brown@email.com', 4445556666, 'Silver', 5),
-(6, 'Eva', 'Miller', 'eva.miller@email.com', 9990001111, 'Bronze', 6),
-(7, 'David', 'Lee', 'david.lee@email.com', 3334445555, 'Gold', 1),
-(8, 'Grace', 'Clark', 'grace.clark@email.com', 6667778888, 'Silver', 2),
-(9, 'Frank', 'White', 'frank.white@email.com', 2223334444, 'Bronze', 3),
-(10, 'Helen', 'Martin', 'helen.martin@email.com', 7778889999, 'Gold', 4);
+(1, 'Patrick', 'Jane', 'patrick.jane@gmail.com', 54637292749, 'Gold', 1),
+(2, 'Harvey', 'Specter', 'harvey.specter@gmail.com', 8373827493, 'Gold', 2),
+(3, 'Mike', 'Ross', 'mike.ross@gmail.com', 9273638392, 'Bronze', 3),
+(4, 'John', 'snow', 'john.snow@gmail.com', 1112223333, 'Gold', 4),
+(5, 'Teresa', 'Lisbon', 'teresa.lisbon@gmail.com', 4445556666, 'Silver', 5),
+(6, 'Kimball', 'Cho', 'kimball.cho@gmail.com', 9990001111, 'Bronze', 6),
+(7, 'Rachel', 'Zane', 'rachel.zane@gmail.com', 3334445555, 'Gold', 1),
+(8, 'Louis', 'Litt', 'louis.litt@gmail.com', 6667778888, 'Silver', 2),
+(9, 'Dana', 'Scott', 'dana.scott@gmail.com', 2223334444, 'Bronze', 3),
+(10, 'Katrina', 'Bennett', 'katrina.bennett@gmail.com', 7778889999, 'Gold', 4);
 
 -- Insert data into the checkout table
 INSERT INTO checkout (id, isbn, member_id, checkout_date, due_date, is_returned)
 VALUES
-(1, 1234567890123, 1, '2024-02-22 10:00:00', '2024-03-15 10:00:00', false),
-(2, 2345678901234, 2, '2024-02-22 11:30:00', '2024-03-16 11:30:00', false),
-(3, 3456789012345, 3, '2024-02-22 13:45:00', '2024-03-18 13:45:00', false),
-(4, 4567890123456, 4, '2024-02-22 15:20:00', '2024-03-20 15:20:00', false),
-(5, 5678901234567, 5, '2024-02-22 17:10:00', '2024-03-22 17:10:00', false),
-(6, 6789012345678, 6, '2024-02-22 19:00:00', '2024-03-24 19:00:00', false);
+(1, 1234567890123, 1, '2024-02-22 10:00:00', '2024-02-27 10:00:00', false),
+(2, 2345678901234, 2, '2024-02-22 11:30:00', '2024-02-27 11:30:00', false),
+(3, 3456789012345, 3, '2024-02-22 13:45:00', '2024-02-24 13:45:00', false),
+(4, 4567890123456, 4, '2024-02-22 15:20:00', '2024-02-24 15:20:00', false),
+(5, 5678901234567, 5, '2024-02-22 17:10:00', '2024-02-25 17:10:00', false),
+(6, 6789012345678, 6, '2024-02-22 19:00:00', '2024-02-25 19:00:00', false);
